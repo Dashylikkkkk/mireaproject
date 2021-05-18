@@ -1,5 +1,4 @@
 package ru.mirea.solomatina.mireaproject;
-
 import android.Manifest;
 import android.content.ContentResolver;
 import android.content.ContentValues;

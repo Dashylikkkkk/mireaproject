@@ -26,7 +26,7 @@
         android:label="fragment_simple_player"
         tools:layout="@layout/fragment_simple_player" />
     <fragment
-        android:id="@+id/accelerometer"
+        android:id="@+id/nav_accelerometer"
         android:name="ru.mirea.solomatina.mireaproject.accelerometer"
         android:label="fragment_accelerometer"
         tools:layout="@layout/fragment_accelerometer" />
@@ -36,7 +36,7 @@
         android:label="fragment_camera"
         tools:layout="@layout/fragment_camera" />
     <fragment
-        android:id="@+id/nav_audiorecord"
+        android:id="@+id/audio_recorder"
         android:name="ru.mirea.solomatina.mireaproject.audio_recorder"
         android:label="fragment_audiorecord"
         tools:layout="@layout/fragment_audio_recorder" />
