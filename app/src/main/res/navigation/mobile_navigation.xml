@@ -20,5 +20,25 @@
         android:name="ru.mirea.solomatina.mireaproject.nav_browser"
         android:label="fragment_nav_browser"
         tools:layout="@layout/fragment_nav_browser" />
+    <fragment
+        android:id="@+id/nav_simple_player"
+        android:name="ru.mirea.solomatina.mireaproject.simple_player"
+        android:label="fragment_simple_player"
+        tools:layout="@layout/fragment_simple_player" />
+    <fragment
+        android:id="@+id/accelerometer"
+        android:name="ru.mirea.solomatina.mireaproject.accelerometer"
+        android:label="fragment_accelerometer"
+        tools:layout="@layout/fragment_accelerometer" />
+    <fragment
+        android:id="@+id/nav_camera"
+        android:name="ru.mirea.solomatina.mireaproject.camera"
+        android:label="fragment_camera"
+        tools:layout="@layout/fragment_camera" />
+    <fragment
+        android:id="@+id/nav_audiorecord"
+        android:name="ru.mirea.solomatina.mireaproject.audio_recorder"
+        android:label="fragment_audiorecord"
+        tools:layout="@layout/fragment_audio_recorder" />
 
 </navigation>

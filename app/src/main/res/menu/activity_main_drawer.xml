@@ -9,9 +9,25 @@
             android:title="@string/menu_home" />
         <item
             android:id="@+id/nav_browser"
-            android:title="Brouser" />
+            android:title="@string/browser" />
         <item
             android:id="@+id/nav_calculator"
-            android:title="Calculator" />
+            android:title="@string/calculator" />
+        <item
+            android:id="@+id/nav_simple_player"
+            android:icon="@android:drawable/ic_media_play"
+            android:title="@string/simple_player" />
+        <item
+            android:id="@+id/nav_accelerometer"
+            android:icon="@android:drawable/ic_menu_always_landscape_portrait"
+            android:title="@string/sensors" />
+        <item
+            android:id="@+id/nav_camera"
+            android:icon="@android:drawable/ic_menu_camera"
+            android:title="@string/camera" />
+        <item
+            android:id="@+id/audio_recorder"
+            android:icon="@android:drawable/presence_audio_online"
+            android:title="@string/audio_recorder" />
     </group>
 </menu>
