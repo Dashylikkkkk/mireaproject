@@ -12,7 +12,6 @@ import android.view.ViewGroup;
 
 import java.util.List;
 
-
 public class fragm_stori extends Fragment {
     private RecyclerView stories;
     private item_story itemStory;

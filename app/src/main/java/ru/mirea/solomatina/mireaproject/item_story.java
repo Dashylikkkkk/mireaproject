@@ -13,10 +13,10 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
-public class item_story extends RecyclerView.Adapter<item_story.StoryHolder>{
+public class item_story extends RecyclerView.Adapter<item_story.StoryHolder> {
     List<story_bd> stories;
 
-    public item_story(List<story_bd> stories){
+    public item_story(List<story_bd> stories) {
         this.stories = stories;
     }
 
@@ -31,30 +31,32 @@ public class item_story extends RecyclerView.Adapter<item_story.StoryHolder>{
     }
 
     @Override
-    public void onBindViewHolder(@NonNull @NotNull StoryHolder holder, int position) {
-        holder.bind(position);
-    }
-
-    @Override
     public int getItemCount() {
         return stories.size();
     }
 
-    class StoryHolder extends RecyclerView.ViewHolder{
+    class StoryHolder extends RecyclerView.ViewHolder {
         TextView storyId;
         TextView storyText;
 
         public StoryHolder(View itemView) {
             super(itemView);
 
-            storyId = itemView.findViewById(R.id.tv_id);
-            storyText = itemView.findViewById(R.id.tv_text);
+            storyId = itemView.findViewById(R.id.text_id1);
+            storyText = itemView.findViewById(R.id.text_id2);
         }
 
-        void bind(int listIndex){
+        void bind(int listIndex) {
             story_bd storybd = stories.get(listIndex);
             storyId.setText(String.valueOf(storybd.id));
             storyText.setText(storybd.text);
         }
     }
+
+    @Override
+    public void onBindViewHolder(@NonNull @NotNull StoryHolder holder, int position) {
+        holder.bind(position);
+    }
+
+
 }

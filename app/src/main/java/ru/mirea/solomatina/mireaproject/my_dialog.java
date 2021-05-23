@@ -21,7 +21,7 @@ public class my_dialog extends AppCompatDialogFragment {
 
         LayoutInflater inflater = getActivity().getLayoutInflater();
         View view = inflater.inflate(R.layout.dialog, null);
-        editStory = view.findViewById(R.id.editStory);
+        editStory = view.findViewById(R.id.text_story);
 
         builder.setView(view)
                 .setTitle("Создание истории ")

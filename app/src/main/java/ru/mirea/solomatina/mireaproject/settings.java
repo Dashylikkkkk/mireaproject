@@ -33,20 +33,20 @@ public class settings extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_settings, container, false);
         preferences = getActivity().getPreferences(MODE_PRIVATE);
-        btnSave = (Button) view.findViewById(R.id.buttonSave);
+        btnSave = (Button) view.findViewById(R.id.button_save);
         btnSave.setOnClickListener(this::onSave);
-        editName = view.findViewById(R.id.editName);
-        String name = preferences.getString("NAME", "Фамилия Имя");
+        editName = view.findViewById(R.id.edit_name);
+        String name = preferences.getString("name", "имя фамилия");
         editName.setText(name);
-        editUniversity = view.findViewById(R.id.editUniversity);
-        editUniversity.setText(preferences.getString("UNIVERSITY", "ВУЗ"));
+        editUniversity = view.findViewById(R.id.edit_vuz);
+        editUniversity.setText(preferences.getString("university", "вуз"));
         return view;
     }
 
     public void onSave(View v){
         SharedPreferences.Editor editPref = preferences.edit();
-        editPref.putString("NAME", editName.getText().toString());
-        editPref.putString("UNIVERSITY", editUniversity.getText().toString());
+        editPref.putString("name", editName.getText().toString());
+        editPref.putString("university", editUniversity.getText().toString());
         editPref.apply();
         Toast.makeText(getContext(), "Настройки сохранены", Toast.LENGTH_SHORT).show();
     }
