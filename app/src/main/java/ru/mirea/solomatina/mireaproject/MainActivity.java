@@ -4,11 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
-import android.widget.EditText;
-import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.navigation.NavController;
@@ -33,8 +30,8 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                my_dialog ds = new my_dialog();
+                ds.show(getSupportFragmentManager(), "Mirea");
             }
         });
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
@@ -42,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home,R.id.nav_browser,R.id.nav_calculator,R.id.nav_simple_player,R.id.nav_accelerometer,R.id.nav_camera,R.id.audio_recorder)
+                R.id.nav_home,R.id.nav_browser,R.id.nav_calculator,R.id.nav_simple_player,R.id.nav_accelerometer,R.id.nav_camera,R.id.audio_recorder,R.id.settings, R.id.stories)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
@@ -71,5 +68,10 @@ public class MainActivity extends AppCompatActivity {
     public void onClickStopMusic(View view) {
         stopService(
                 new Intent(MainActivity.this, PlayerService.class));
+
+    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data)
+    { super.onActivityResult(requestCode, resultCode, data);
     }
 }

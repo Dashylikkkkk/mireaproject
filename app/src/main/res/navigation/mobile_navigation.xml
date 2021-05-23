@@ -38,7 +38,17 @@
     <fragment
         android:id="@+id/audio_recorder"
         android:name="ru.mirea.solomatina.mireaproject.audio_recorder"
-        android:label="fragment_audiorecord"
+        android:label="fragment_audio_recorder"
         tools:layout="@layout/fragment_audio_recorder" />
+    <fragment
+        android:id="@+id/settings"
+        android:name="ru.mirea.solomatina.mireaproject.settings"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/stories"
+        android:name="ru.mirea.solomatina.mireaproject.fragm_stori"
+        android:label="fragment_stories"
+        tools:layout="@layout/fragment_stories" />
 
 </navigation>

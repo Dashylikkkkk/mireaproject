@@ -29,5 +29,12 @@
             android:id="@+id/audio_recorder"
             android:icon="@android:drawable/presence_audio_online"
             android:title="@string/audio_recorder" />
+        <item
+            android:id="@+id/settings"
+            android:title="@string/settings" />
+
+        <item
+            android:id="@+id/stories"
+            android:title="@string/stories" />
     </group>
 </menu>
